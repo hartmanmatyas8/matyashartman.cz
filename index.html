@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pracuji na tom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4em;
+      background: linear-gradient(160deg, #5f6b2f 0%, #8a9450 35%, #c9cfa4 70%, #ffffff 100%);
+      background-attachment: fixed;
+      font-family: 'VT323', 'Courier New', monospace;
+      color: #1f2410;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: clamp(3rem, 11vw, 7.5rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    h1::after {
+      content: "_";
+      animation: blink 1s steps(1) infinite;
+    }
+    .emoji {
+      font-size: clamp(3.5rem, 12vw, 8rem);
+      line-height: 1;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      h1::after { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Pracuji na tom</h1>
+  <div class="emoji" aria-hidden="true">👨🏻‍💻</div>
+</body>
+</html>
